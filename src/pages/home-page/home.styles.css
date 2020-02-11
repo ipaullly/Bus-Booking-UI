@@ -1,14 +1,18 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px 80px;
+  padding: 0.2em;
+  height: 900px;
 }
 
 .search-fields {
+  margin: 40px 0;
   display: flex;
   width: 60vw;
   justify-content: space-between;
+  text-decoration: none;
 }
 .header {
   letter-spacing: 0.5px;
@@ -16,6 +20,13 @@
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
   font-weight: bolder;
+}
+
+.intro {
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .form-control {
@@ -28,7 +39,6 @@
   height: 50px;
   width: 100%;
   border-radius: 0;
-  border: 1px solid grey;
   margin: 0 25px;
 }
 
@@ -38,11 +48,10 @@
   color: white;
   font-size: 18px;
   display: block;
-  height: 50px;
+  height: 70px;
   width: auto;
   text-align: center;
   border-radius: 0;
-  border: 1px solid black;
   padding: 20px 10px 0 10px;
   margin: 20px 0;
   text-transform: uppercase;

@@ -1,0 +1,31 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: teal;
+  color: navy;
+  text-transform: uppercase;
+}
+
+.logo {
+  color: bisque;
+  font-weight: 900;
+  font-size: x-large;
+  padding: 20px 0 0 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-link {
+  padding: 10px;
+}
+
+.menu-link:hover{
+  color: bisque;
+  cursor: pointer;
+}

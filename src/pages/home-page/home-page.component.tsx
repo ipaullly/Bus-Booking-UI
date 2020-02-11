@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './home.styles.css';
 import CustomButton from 'src/components/button/button.component';
 import Cities from 'src/JSON/cities.json';
+import { Link } from 'react-router-dom';
 
 interface SearchState {
   travellingFrom: string,
@@ -29,6 +30,7 @@ class HomePage extends Component<{}, SearchState> {
     return(
       <div className="container">
         <h2 className="header">Search for Available Buses</h2>
+        <p className="intro">Find the most convenient and affordable bus fares here!</p>
         <div className="search-fields">
           <select className="form-control">
             <option>---travelling-from---</option>
@@ -47,7 +49,7 @@ class HomePage extends Component<{}, SearchState> {
             }
           </select>
           <input type="date" placeholder="depature date" className="form-control date-time"/>
-          <CustomButton type='submit'>Search Trips</CustomButton>
+          <CustomButton type='submit'><Link to='/trips'>Search Trips</Link></CustomButton>
         </div>
         <div className="mpesa">
           You can pay via M-pesa

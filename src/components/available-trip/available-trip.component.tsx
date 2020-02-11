@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './available-trip.styles.css';
+import CustomButton from '../button/button.component';
 
 interface ITripProps{
     busCompany: string;
@@ -28,7 +29,7 @@ class AvailableTrip extends React.Component<ITripProps, AvailableTripState>{
   }
 
   render(){
-    const { from, to, busCompany, depatureTime, travelDate, boardingPoint } = this.props;
+    const { from, to, busCompany, depatureTime, travelDate, boardingPoint, price } = this.props;
     return(
       <div className="trip-card">
         <div className="aside">
@@ -55,7 +56,13 @@ class AvailableTrip extends React.Component<ITripProps, AvailableTripState>{
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="price">
+            <span className="label-title">Price of Ticket</span>
+            <span>{price}</span>
+          </div>
+          <CustomButton type="submit">Book Now</CustomButton>
+        </div>
       </div>
     );
   }

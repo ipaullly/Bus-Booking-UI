@@ -22,10 +22,20 @@
   flex-direction: column;
 }
 .right{
-  background-color: red;
+  background-color: skyblue;
   margin: 0.1em;
   flex: 1 1 15%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .top{
@@ -49,4 +59,5 @@
 
 .label-title{
  text-transform: uppercase;
+ font-size: small;
 }
