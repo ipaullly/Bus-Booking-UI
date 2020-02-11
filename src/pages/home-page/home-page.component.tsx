@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './home.styles.css';
 import FormInput from 'src/components/input-field/input-field.component';
+import CustomButton from 'src/components/button/button.component';
 
 interface SearchState {
   travellingFrom: string,
@@ -51,7 +52,7 @@ class HomePage extends Component<{}, SearchState> {
             handleChange={this.handleChange('departureDate')}
             label="Date of Departure"
           />
-          <button>Search</button>
+          <CustomButton type='submit'>Search Trips</CustomButton>
         </div>
       </div>
     );

@@ -10,3 +10,10 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.header {
+  letter-spacing: 0.5px;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+}
