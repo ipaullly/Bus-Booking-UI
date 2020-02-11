@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -21,5 +22,8 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "config-overrides.js"
   ]
 }
