@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './home.styles.css';
-import FormInput from 'src/components/input-field/input-field.component';
 import CustomButton from 'src/components/button/button.component';
+import Cities from 'src/JSON/cities.json';
 
 interface SearchState {
   travellingFrom: string,
@@ -26,33 +26,31 @@ class HomePage extends Component<{}, SearchState> {
   }
 
   render() {
-    const { travellingFrom, travellingTo, departureDate } = this.state;
     return(
       <div className="container">
         <h2 className="header">Search for Available Buses</h2>
         <div className="search-fields">
-          <FormInput 
-            name="travellingFrom"
-            type="text"
-            value={travellingFrom}
-            handleChange={this.handleChange('travellingFrom')}
-            label="Travelling From"
-          />
-          <FormInput 
-            name="travellingTo"
-            type="text"
-            value={travellingTo}
-            handleChange={this.handleChange('travellingTo')}
-            label="Destination"
-          />
-          <FormInput 
-            name="departureDate"
-            type="date"
-            value={departureDate}
-            handleChange={this.handleChange('departureDate')}
-            label="Date of Departure"
-          />
+          <select className="form-control">
+            <option>---travelling-from---</option>
+            {
+              Cities.cities && Cities.cities.map((e, key) => {
+              return <option key={key} value={e.Key}>{e.Value}</option>;
+              })
+            }
+          </select>
+          <select className="form-control">
+            <option>---travelling-to---</option>
+            {
+              Cities.cities && Cities.cities.map((e, key) => {
+              return <option key={key} value={e.Key}>{e.Value}</option>;
+              })
+            }
+          </select>
+          <input type="date" placeholder="depature date" className="form-control date-time"/>
           <CustomButton type='submit'>Search Trips</CustomButton>
+        </div>
+        <div className="mpesa">
+          You can pay via M-pesa
         </div>
       </div>
     );

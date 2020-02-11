@@ -1,13 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  padding: 20px 80px;
 }
 
 .search-fields {
   display: flex;
-  flex-direction: column;
+  width: 60vw;
   justify-content: space-between;
 }
 .header {
@@ -16,4 +16,54 @@
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
   font-weight: bolder;
+}
+
+.form-control {
+  background: none;
+  background-color: white;
+  color: grey;
+  padding-left: 20px;
+  font-size: 18px;
+  display: block;
+  height: 50px;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid grey;
+  margin: 0 25px;
+}
+
+.mpesa {
+  background: none;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  display: block;
+  height: 50px;
+  width: auto;
+  text-align: center;
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 20px 10px 0 10px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+}
+
+@media screen and (max-width: 1229px) {
+  .search-fields {
+    flex-direction: column;
+    width: 40vw;
+  }
+  .form-control {
+    margin: 25px 0;
+  }
+  .date-time {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 1229px) and (max-width: 1528px) {
+  .form-control {
+    margin: 0 10px;
+  }
 }

@@ -1,0 +1,26 @@
+.available-trips-page{
+  margin: 0;
+  padding: 0;
+  border: 1px dotted grey;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 1000px;
+}
+.side-search-bar{
+  border: 1px solid navy;
+  margin: 0.5em;
+  padding: 2em;
+  flex: 1 2 20%;
+  height: 600px;
+}
+.available-trips{
+  border: 1px solid navy;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 70%;
+  height: 100%;
+
+}
