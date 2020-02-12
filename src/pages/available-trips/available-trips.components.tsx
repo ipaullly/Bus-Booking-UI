@@ -41,7 +41,7 @@ class AvailableTrips extends Component<{}, AvailableState> {
             }
           </select>
           <input type="date" placeholder="depature date" className="mini-form-control"/>
-          <CustomButton type='submit'>Search Trips</CustomButton>
+          <CustomButton type='submit'>Search</CustomButton>
         </div>
         </div>
         <div className="available-trips">
