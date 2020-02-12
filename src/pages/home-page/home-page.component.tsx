@@ -47,7 +47,7 @@ class HomePage extends Component<{}, SearchState> {
             }
           </select>
           <input type="date" placeholder="depature date" className="form-control date-time"/>
-          <CustomButton type='submit'><Link to='/trips'>Search Trips</Link></CustomButton>
+          <CustomButton type='submit'><Link to='/trips' className="link">Search Trips</Link></CustomButton>
         </div>
         <div className="mpesa">
           You can pay via M-pesa
