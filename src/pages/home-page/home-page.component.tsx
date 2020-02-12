@@ -5,25 +5,22 @@ import Cities from 'src/JSON/cities.json';
 import { Link } from 'react-router-dom';
 
 interface SearchState {
-  travellingFrom: string,
-  travellingTo: string,
-  departureDate: number
+  obj: {} | null;
 }
 
 class HomePage extends Component<{}, SearchState> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      travellingFrom: '',
-      travellingTo: '',
-      departureDate: 0,
+      obj: null,
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = (field: string) => (e: any) => {
-    const value = e.currentTarget.value;
-    this.setState({ [field]: value } as SearchState);
+  handleChange = (e: any) => {
+    this.setState({ obj: Cities.cities[e.target.value] });
+    console.log(this.state);
+    
   }
 
   render() {
@@ -32,15 +29,15 @@ class HomePage extends Component<{}, SearchState> {
         <h2 className="header">Search for Available Buses</h2>
         <p className="intro">Find the most convenient and affordable bus fares here!</p>
         <div className="search-fields">
-          <select className="form-control">
+          <select className="form-control" onChange={this.handleChange}>
             <option>---travelling-from---</option>
             {
               Cities.cities && Cities.cities.map((e, key) => {
-              return <option key={key} value={e.Key}>{e.Value}</option>;
+              return <option key={key} value={key}>{e.Value}</option>;
               })
             }
           </select>
-          <select className="form-control">
+          <select className="form-control"  onChange={this.handleChange}>
             <option>---travelling-to---</option>
             {
               Cities.cities && Cities.cities.map((e, key) => {
