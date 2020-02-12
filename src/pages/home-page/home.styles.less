@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2em;
+  height: 900px;
+
+  .search-fields {
+    margin: 40px 0;
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    text-decoration: none;
+
+    .form-control {
+      background: none;
+      background-color: white;
+      color: grey;
+      padding-left: 20px;
+      font-size: 18px;
+      display: block;
+      height: 50px;
+      width: 100%;
+      border-radius: 0;
+      margin: 0 25px;
+    }
+  }
+
+  .header {
+    letter-spacing: 0.5px;
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  
+  .intro {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .mpesa {
+    background: none;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    display: block;
+    height: 70px;
+    width: auto;
+    text-align: center;
+    border-radius: 0;
+    padding: 20px 10px 0 10px;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 1229px) {
+  .search-fields {
+    flex-direction: column;
+    width: 40vw;
+  }
+  .form-control {
+    margin: 25px 0;
+  }
+  .date-time {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 1229px) and (max-width: 1528px) {
+  .form-control {
+    margin: 0 10px;
+  }
+}

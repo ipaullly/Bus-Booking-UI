@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './button.styles.css';
+import './button.styles.less';
 
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
   block?: true;

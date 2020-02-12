@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './navbar.styles.css';
+import './navbar.styles.less';
 import { Link } from 'react-router-dom';
 
 interface NavState{

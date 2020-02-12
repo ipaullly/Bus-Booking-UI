@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './input-field.styles.css';
+import './input-field.styles.less';
 
 interface FormProps {
   label: string;

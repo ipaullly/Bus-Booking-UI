@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './home.styles.css';
 import CustomButton from 'src/components/button/button.component';
 import Cities from 'src/JSON/cities.json';
 import { Link } from 'react-router-dom';
+
+import './home.styles.less';
 
 interface SearchState {
   obj: {} | null;

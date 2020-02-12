@@ -1,7 +1,8 @@
 import React from 'react';
 
-import './available-trip.styles.css';
 import CustomButton from '../button/button.component';
+
+import './available-trip.styles.less';
 
 interface ITripProps{
     busCompany: string;
