@@ -34,7 +34,7 @@ class AvailableTrip extends React.Component<ITripProps, AvailableTripState>{
     return(
       <div className="trip-card">
         <div className="aside">
-          <img src="https://picsum.photos/200/160" alt="avatar"/>
+          <img src="https://picsum.photos/200/180" alt="avatar"/>
         </div>
         <div className="center">
           <div className="top">
