@@ -5,8 +5,13 @@ import { Link } from 'react-router-dom';
 
 import './home.styles.less';
 
+interface Options {
+  from: string;
+  to: string;
+}
+
 interface SearchState {
-  obj: {} | null;
+  obj: Options | null;
 }
 
 class HomePage extends Component<{}, SearchState> {
@@ -18,8 +23,8 @@ class HomePage extends Component<{}, SearchState> {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = (e: any) => {
-    this.setState({ obj: Cities.cities[e.target.value] });
+  handleChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    this.setState({ obj: Cities.cities[parseInt(e.target.value)] });
     console.log(this.state);
     
   }
@@ -28,17 +33,18 @@ class HomePage extends Component<{}, SearchState> {
     return(
       <div className="container">
         <h2 className="header">Search for Available Buses</h2>
+        <hr/>
         <p className="intro">Find the most convenient and affordable bus fares here!</p>
         <div className="search-fields">
-          <select className="form-control" onChange={this.handleChange}>
+          <select className="form-control" onBlur={this.handleChange}>
             <option>---travelling-from---</option>
             {
               Cities.cities && Cities.cities.map((e, key) => {
-              return <option key={key} value={key}>{e.Value}</option>;
+              return <option key={key} value={e.Key}>{e.Value}</option>;
               })
             }
           </select>
-          <select className="form-control"  onChange={this.handleChange}>
+          <select className="form-control" onBlur={this.handleChange}>
             <option>---travelling-to---</option>
             {
               Cities.cities && Cities.cities.map((e, key) => {

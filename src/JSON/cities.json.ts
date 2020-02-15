@@ -1,14 +1,14 @@
 const Cities = {
   cities: [
-    { Key: 1, Value: 'Nairobi'},
-    { Key: 2, Value: 'Kisumu'},
-    { Key: 3, Value: 'Kampala'},
-    { Key: 4, Value: 'Maseno'},
-    { Key: 5, Value: 'Siaya'},
-    { Key: 6, Value: 'Bondo'},
-    { Key: 7, Value: 'Nakuru'},
-    { Key: 8, Value: 'Homa Bay'},
-    { Key: 9, Value: 'Kisii'},
+    { Key: 0, Value: 'Nairobi'},
+    { Key: 1, Value: 'Kisumu'},
+    { Key: 2, Value: 'Kampala'},
+    { Key: 3, Value: 'Maseno'},
+    { Key: 4, Value: 'Siaya'},
+    { Key: 5, Value: 'Bondo'},
+    { Key: 6, Value: 'Nakuru'},
+    { Key: 7, Value: 'Homa Bay'},
+    { Key: 8, Value: 'Kisii'},
   ]
 }
 
