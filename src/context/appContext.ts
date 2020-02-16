@@ -4,13 +4,13 @@ import { IOptions, IFilteredTrips } from '../utils/interfaces';
 interface IAppContext{
   selectedOptions: IOptions[];
   filteredTrips: IFilteredTrips[];
-  addOption: (option: string) => void;
+  addOption: (option: IOptions) => void;
 }
 
 const AppContext = createContext<IAppContext>({
   selectedOptions: [],
   filteredTrips: [],
-  addOption: (option: string) => {},
+  addOption: (option: {}) => {},
 });
 
 export default AppContext;

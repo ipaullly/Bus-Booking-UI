@@ -19,6 +19,7 @@ export interface IFilteredTrips{
 
 export interface IOptionsState{
   selectedOptions: IOptions[];
+  filteredTrips: IFilteredTrips[];
 }
 
 export interface IOptionAction{
