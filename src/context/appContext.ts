@@ -1,23 +1,5 @@
 import { createContext } from 'react';
-
-interface IOptions{
-  from: string;
-  to: string;
-  date: number;
-}
-
-interface IFilteredTrips{
-  busCompany: string;
-  from: string;
-  to: string;
-  price: string;
-  depatureTime: string;
-  travelDate: string;
-  availableSeats: number;
-  boardingPoint: string;
-  key: number;
-  value?: number;
-}
+import { IOptions, IFilteredTrips } from '../utils/interfaces';
 
 interface IAppContext{
   selectedOptions: IOptions[];
@@ -28,7 +10,7 @@ interface IAppContext{
 const AppContext = createContext<IAppContext>({
   selectedOptions: [],
   filteredTrips: [],
-  addOption: (option) => {},
+  addOption: (option: string) => {},
 });
 
 export default AppContext;
